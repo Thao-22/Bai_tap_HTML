@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tạo form và các điều khiển</title>
+    <script>
+        function ThongBaoTour() {
+            document.getElementById("lblThongBao").innerText = "Bạn đã đăng ký thành công!!!";
+        }
+    </script>
+</head>
+<body>
+    <h2 align="center">Đăng ký du lịch</h2>
+    <form id="formDuLich">
+        <table border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#FFFFCC">
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text" id="txtHoTen" size="30" value="Phạm Ngọc Cẩm Tú"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" id="txtDiaChi" size="30" value="227 Nguyễn Văn Cừ"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="text" id="txtDienThoai" size="15" value="8351056"></td>
+            </tr>
+            <tr>
+                <td>Quốc tịch Việt Nam</td>
+                <td><input type="checkbox" id="chkVietNam" checked></td>
+            </tr>
+            <tr>
+                <td>Chọn tour</td>
+                <td>
+                    <select id="cboTour">
+                        <optgroup label="Miền Bắc">
+                            <option value="1">Hà Nội - Hạ Long - Sapa</option>
+                            <option value="2">Hà Nội - Chùa Hương - Ninh Bình</option>
+                            <option value="3">Hà Nội - Cát Bà - Tuần Châu</option>
+                        </optgroup>
+                        <optgroup label="Miền Trung">
+                            <option value="4">Huế - Bạch Mã - Đà Nẵng</option>
+                            <option value="5">Nha Trang - Đà Lạt</option>
+                            <option value="6" selected>Buôn Mê Thuột - Gia Lai - Kontum</option>
+                        </optgroup>
+                        <optgroup label="Miền Nam">
+                            <option value="7">TP.HCM - Cần Thơ - Cà Mau</option>
+                            <option value="8">TP.HCM - Mỹ Tho</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Phương tiện</td>
+                <td>
+                    <input type="radio" name="phuongtien" value="MayBay"> Máy bay
+                    <input type="radio" name="phuongtien" value="OTo" checked> Xe ô tô
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <fieldset style="width: 350px; height: 55px;">
+                        <legend align="left" style="font-style: italic; color: green;">Số lượng đoàn khách</legend>
+                        Người lớn <input type="text" id="txtNguoiLon" size="3" value="5"> 
+                        Trẻ em <input type="text" id="txtTreEm" size="3" value="1">
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>Yêu cầu thêm</td>
+                <td>
+                    <textarea id="txtYeuCau" style="width: 300px;" rows="3">- Có trẻ em dưới 5 tuổi&#10;- Có người già (mẹ)</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Đồng ý" onclick="ThongBaoTour()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <div id="lblThongBao" style="color: green;"></div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
