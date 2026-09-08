@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form và các điều khiển trên form</title>
+    <script>
+        function xuLyDongY() {
+            var maNguoiDung = document.getElementById("txtMaNguoiDung").value;
+            document.getElementById("lblKetQua").innerText = maNguoiDung;
+        }
+    </script>
+</head>
+<body>
+    <h2 align="center" style="color: #8B0000;">Đăng nhập</h2>
+    <form id="frmDangNhap">
+        <table border="1" align="center" cellpadding="5" cellspacing="0">
+            <tr>
+                <td>Mã người dùng:</td>
+                <td><input type="text" id="txtMaNguoiDung" value="ptnhung" /></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu:</td>
+                <td><input type="password" id="txtMatKhau" value="123456" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" id="btnDongY" value="Đồng ý" onclick="xuLyDongY()" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <div id="lblKetQua" style="color: blue; font-weight: bold;"></div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
